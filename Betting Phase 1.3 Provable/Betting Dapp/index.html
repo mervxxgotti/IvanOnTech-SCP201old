@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Betting</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./abi.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Betting Dapp</h1>
+        <p class="lead">Double your ETH or lose it all (refresh page to start new game). </p>
+      </div>
+    </div>
+    <div class="container">
+
+      <div>
+        <h2>Amount (minimum bet or donation is 0.01 ETH)</h2>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="bet_input" placeholder="ETH Amount" >
+        </div>
+        <button type="button" id="play_button" class="btn btn-primary">Play</button>
+      </div>
+
+      <p> </p>
+
+      <div>
+        <h2>Results</h2>
+        <p class="lead">If the oracle returns an odd number, you win. </p>
+
+        <p> </p>
+
+        <button type="button" id="refresh_button" class="btn btn-primary">Refresh</button>
+        <div>
+          Your Metamask account balance:  <span id="metamask_balance_output"></span>
+        </div>
+        <div>
+          Metamask account (sender) address:  <span id="metamask_address_output"></span>
+        </div>
+        <p> </p>
+        <div>
+          Contract balance:  <span id="contract_balance_output"></span>
+        </div>
+        <div>
+          Contract address:  <span id="contract_address_output"></span>
+        </div>
+        <p> </p>
+        <div>
+          Player balance:  <span id="player_balance_output"></span>
+        </div>
+        <div>
+          Last random number:  <span id="random_number_output"></span>
+        </div>
+        <div>
+          Is player waiting for next random number?:  <span id="waiting_output"></span>
+        </div>
+        <div>
+          Result of last round:  <span id="round_output"></span>
+        </div>
+        <div>
+          Last bet:  <span id="bet_output"></span>
+        </div>
+      </div>
+
+      <p> </p>
+
+      <button type="button" id="withdraw_player_button" class="btn btn-primary">Withdraw Player Balance</button>
+      <button type="button" id="withdraw_contract_button" class="btn btn-primary">Withdraw Contract Balance</button>
+      <button type="button" id="depositTo_contract_button" class="btn btn-primary">Deposit (Donate) to Contract Balance</button>
+
+    </div>
+
+
+  </body>
+</html>
